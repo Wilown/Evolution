@@ -6,6 +6,8 @@ import java.util.Scanner;
 
 import javax.print.attribute.standard.Destination;
 
+
+//Test pour Travis
 public class Main {
 
 	private static int compteurId=0;
@@ -154,7 +156,7 @@ public class Main {
 	 */
 	private static Secteur[] generateworld() {
 
-		// mechants des batiments 1 à 4 de chaque ville. Chaque ville aura donc les mêmes méchants.
+		// mechants des batiments 1 Ã  4 de chaque ville. Chaque ville aura donc les mÃªmes mÃ©chants.
 		List badguys = new ArrayList();
 		badguys.add(new Mechants ("Mechant 1"));
 		badguys.add(new Mechants ("Mechant 2"));
@@ -171,7 +173,7 @@ public class Main {
 		badguysbat5.add(new Mechants ("Mechant 4"));
 		badguysbat5.add(new Mechants("Saitama", (byte)20, (byte) 125, (byte) 3));
 
-		// Creation de la première ville, de ses batiments aléatoires et ajout de la liste de méchant dans chaque batiment
+		// Creation de la premiÃ¨re ville, de ses batiments alÃ©atoires et ajout de la liste de mÃ©chant dans chaque batiment
 		Ville ville1 = new Ville ("Ville1");
 		ville1.addBatiments(new Batiment("Batiment1"));
 		Batiment battemp = (Batiment)(ville1.getBatiments().get(0));
@@ -196,7 +198,7 @@ public class Main {
 
 
 
-		// Creation de la seconde ville sur le même principe.	
+		// Creation de la seconde ville sur le mÃªme principe.	
 		Ville ville2 = new Ville ("Ville2");
 		ville2.addBatiments(new Batiment("Batiment1"));
 		battemp = (Batiment)(ville1.getBatiments().get(0));
@@ -219,13 +221,13 @@ public class Main {
 		battemp.setMechants(badguysbat5);
 		ville2.setBatiment(battemp, 4);
 
-		// Creation du premier secteur et ajout du tableau des deux premières villes.				
+		// Creation du premier secteur et ajout du tableau des deux premiÃ¨res villes.				
 		Secteur secteur1 = new Secteur ("secteur1");
 		Ville tabvilles[] = new Ville[] {ville1, ville2};
 		secteur1.setVilles(tabvilles);
 
 
-		//Création de la troisième ville.
+		//CrÃ©ation de la troisiÃ¨me ville.
 		Ville ville3 = new Ville ("Ville3");
 		ville3.addBatiments(new Batiment("Batiment1"));
 		battemp = (Batiment)(ville1.getBatiments().get(0));
@@ -249,7 +251,7 @@ public class Main {
 		ville3.setBatiment(battemp, 4);
 
 
-		//Création de la quatrième ville.
+		//CrÃ©ation de la quatriÃ¨me ville.
 		Ville ville4 = new Ville ("Ville4");
 		ville4.addBatiments(new Batiment("Batiment1"));
 		battemp = (Batiment)(ville1.getBatiments().get(0));
@@ -273,7 +275,7 @@ public class Main {
 		ville4.setBatiment(battemp, 4);
 
 
-		//Deuxième secteur avec deuxième tableau composé des villes 3 et 4.
+		//DeuxiÃ¨me secteur avec deuxiÃ¨me tableau composÃ© des villes 3 et 4.
 		Secteur secteur2 = new Secteur ("secteur2");
 		Ville tabvilles2[] = new Ville[] {ville3, ville4};
 		secteur2.setVilles(tabvilles2);
